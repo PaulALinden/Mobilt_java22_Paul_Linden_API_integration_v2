@@ -1,6 +1,5 @@
 package com.three.api_integration
 
-import android.util.Log
 import com.google.gson.Gson
 import okhttp3.Call
 import okhttp3.Callback
@@ -11,10 +10,10 @@ import java.io.IOException
 
 class APICallManager {
 
-    private val client = OkHttpClient()
-    private val baseUrl = "https://api.chucknorris.io/jokes/random"
+    fun chuckNorrisApiCall(callback: (String?) -> Unit){
 
-    fun makeApiCall(callback: (String?) -> Unit){
+        val client = OkHttpClient()
+        val baseUrl = "https://api.chucknorris.io/jokes/random"
 
         val request = baseUrl.let {
             Request.Builder()
@@ -27,16 +26,44 @@ class APICallManager {
                 val responseBody = response.body?.string()
                 if (responseBody != null) {
                     val gson = Gson()
-                    val apiResponse = gson.fromJson(responseBody, APIData::class.java)
+                    val apiResponse = gson.fromJson(responseBody, APIChuckData::class.java)
                     callback(apiResponse.value)
                 }
             }
-
 
             override fun onFailure(call: Call, e: IOException) {
                 e.printStackTrace()
             }
         })
     }
+
+    fun foxApiCall(callback: (String?) -> Unit) {
+        val client = OkHttpClient()
+        val baseUrl = "https://randomfox.ca/floof/"
+
+        val request = baseUrl.let {
+            Request.Builder()
+                .url(it)
+                .build()
+        }
+
+        client.newCall(request).enqueue(object : Callback {
+            override fun onResponse(call: Call, response: Response) {
+                if (response.isSuccessful) {
+                    val responseBody = response.body?.string()
+                    val gson = Gson()
+                    val apiResponse = gson.fromJson(responseBody, APIFoxData::class.java)
+                    callback(apiResponse.image)
+                } else {
+                    callback(null)
+                }
+            }
+            override fun onFailure(call: Call, e: IOException) {
+                e.printStackTrace()
+                callback(null)
+            }
+        })
+    }
+
 }
 

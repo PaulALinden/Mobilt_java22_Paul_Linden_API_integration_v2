@@ -51,7 +51,7 @@ class BranchOneFragment : Fragment() {
 
     private fun getChuckQuote(callback: (String) -> Unit) {
         val apiCallManager = APICallManager()
-        apiCallManager.makeApiCall { result ->
+        apiCallManager.chuckNorrisApiCall { result ->
             if (result != null) {
                 callback(result)
             } else {

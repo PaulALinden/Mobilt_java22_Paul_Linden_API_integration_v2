@@ -1,6 +1,6 @@
 package com.three.api_integration
 
-data class APIData(
+data class APIChuckData(
     val value: String
 )
 
