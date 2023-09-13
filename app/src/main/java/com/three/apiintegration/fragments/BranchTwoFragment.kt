@@ -1,4 +1,4 @@
-package com.three.api_integration
+package com.three.apiintegration.fragments
 
 import android.os.Bundle
 import android.util.Log
@@ -13,14 +13,14 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
+import com.three.apiintegration.R
+import com.three.apiintegration.apimanager.APICallManager
 
 
 class BranchTwoFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
 
         requireActivity().onBackPressedDispatcher.addCallback(
             this,
@@ -37,8 +37,8 @@ class BranchTwoFragment : Fragment() {
     ): View? {
         val rootView = inflater.inflate(R.layout.fragment_branch_two, container, false)
         val progressBar = rootView.findViewById<ProgressBar>(R.id.loadingPanel)
-        val button = rootView.findViewById<Button>(R.id.button4)
-        val catButton = rootView.findViewById<Button>(R.id.catButton)
+        val button = rootView.findViewById<Button>(R.id.toStartButton2)
+        val catButton = rootView.findViewById<Button>(R.id.getFoxImageButton)
         val catImageView = rootView.findViewById<ImageView>(R.id.catImageView)
 
         catButton.setOnClickListener {

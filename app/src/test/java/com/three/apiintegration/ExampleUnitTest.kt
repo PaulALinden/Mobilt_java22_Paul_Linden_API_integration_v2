@@ -1,4 +1,4 @@
-package com.three.api_integration
+package com.three.apiintegration
 
 import org.junit.Test
 

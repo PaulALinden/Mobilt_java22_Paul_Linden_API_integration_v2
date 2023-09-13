@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/holo_purple"
-    tools:context=".BranchTwoFragment">
+    tools:context=".fragments.BranchTwoFragment">
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/toStartButton2"
         android:layout_width="match_parent"
         android:layout_height="101dp"
-        android:text="Back to start"
+        android:text="@string/back_to_start"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -21,16 +21,16 @@
 
     <ImageView
         android:id="@+id/catImageView"
-        android:layout_width="400dp"
-        android:layout_height="313dp"
+        android:layout_width="377dp"
+        android:layout_height="318dp"
         android:background="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
+        android:contentDescription="@string/foximagecontainer"
+        app:layout_constraintBottom_toTopOf="@+id/toStartButton2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.015"
-       />
+        app:layout_constraintVertical_bias="0.051" />
 
     <ProgressBar
         android:id="@+id/loadingPanel"
@@ -47,11 +47,11 @@
         app:layout_constraintTop_toTopOf="@+id/catImageView" />
 
     <Button
-        android:id="@+id/catButton"
+        android:id="@+id/getFoxImageButton"
         android:layout_width="191dp"
         android:layout_height="99dp"
-        android:text="Get random fox"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
+        android:text="@string/get_random_fox"
+        app:layout_constraintBottom_toTopOf="@+id/toStartButton2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/catImageView" />

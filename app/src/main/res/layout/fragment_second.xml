@@ -1,28 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/holo_blue_bright"
-    tools:context=".SecondFragment">
+    tools:context=".fragments.SecondFragment">
 
-    <LinearLayout
+    <Button
+        android:id="@+id/toFragmentTwoButton"
         android:layout_width="match_parent"
-        android:layout_height="143dp"
-        android:orientation="horizontal">
+        android:layout_height="140dp"
+        android:layout_weight="1"
+        android:text="@string/to_random_fox"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toFragmentOneButton"
+        app:layout_constraintVertical_bias="0.289" />
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="To branch 1" />
-
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="To branch 2" />
-    </LinearLayout>
-</FrameLayout>
+    <Button
+        android:id="@+id/toFragmentOneButton"
+        android:layout_width="match_parent"
+        android:layout_height="142dp"
+        android:layout_marginTop="156dp"
+        android:layout_weight="1"
+        android:text="@string/to_chuck_norris"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

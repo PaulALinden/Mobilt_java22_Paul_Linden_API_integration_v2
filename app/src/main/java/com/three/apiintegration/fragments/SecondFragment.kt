@@ -1,4 +1,4 @@
-package com.three.api_integration
+package com.three.apiintegration.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,9 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import androidx.navigation.NavController
-import androidx.navigation.NavHost
 import androidx.navigation.findNavController
+import com.three.apiintegration.R
 
 class SecondFragment : Fragment() {
 
@@ -23,8 +22,8 @@ class SecondFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val rootView = inflater.inflate(R.layout.fragment_second, container, false)
-        val button2 = rootView.findViewById<Button>(R.id.button2)
-        val button3 = rootView.findViewById<Button>(R.id.button3)
+        val button2 = rootView.findViewById<Button>(R.id.toFragmentOneButton)
+        val button3 = rootView.findViewById<Button>(R.id.toFragmentTwoButton)
 
         button2.setOnClickListener {
             view?.findNavController()?.navigate(R.id.action_secondFragment_to_branchOneFragment)

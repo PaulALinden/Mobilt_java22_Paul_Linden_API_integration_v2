@@ -1,12 +1,7 @@
-package com.three.api_integration
+package com.three.apiintegration
 
 import android.os.Bundle
-import android.util.Log
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.FragmentManager
-import androidx.navigation.NavController
-import androidx.navigation.fragment.NavHostFragment
 
 class MainActivity : AppCompatActivity() {
 

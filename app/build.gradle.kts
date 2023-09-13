@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.three.api_integration"
+    namespace = "com.three.apiintegration"
     compileSdk = 34
 
     defaultConfig {

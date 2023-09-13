@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/startFragment"
-        android:name="com.three.api_integration.StartFragment"
+        android:name="com.three.apiintegration.fragments.StartFragment"
         android:label="fragment_start"
         tools:layout="@layout/fragment_start" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/secondFragment"
-        android:name="com.three.api_integration.SecondFragment"
+        android:name="com.three.apiintegration.fragments.SecondFragment"
         android:label="fragment_second"
         tools:layout="@layout/fragment_second" >
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/branchOneFragment"
-        android:name="com.three.api_integration.BranchOneFragment"
+        android:name="com.three.apiintegration.fragments.BranchOneFragment"
         android:label="fragment_branch_one"
         tools:layout="@layout/fragment_branch_one" >
         <action
@@ -37,7 +37,7 @@
     </fragment>
     <fragment
         android:id="@+id/branchTwoFragment"
-        android:name="com.three.api_integration.BranchTwoFragment"
+        android:name="com.three.apiintegration.fragments.BranchTwoFragment"
         android:label="fragment_branch_two"
         tools:layout="@layout/fragment_branch_two" >
         <action

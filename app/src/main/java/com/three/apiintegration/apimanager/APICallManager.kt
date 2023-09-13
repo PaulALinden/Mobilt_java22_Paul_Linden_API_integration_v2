@@ -1,4 +1,4 @@
-package com.three.api_integration
+package com.three.apiintegration.apimanager
 
 import com.google.gson.Gson
 import okhttp3.Call
