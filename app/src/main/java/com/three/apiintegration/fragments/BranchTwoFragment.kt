@@ -39,16 +39,16 @@ class BranchTwoFragment : Fragment() {
         val progressBar = rootView.findViewById<ProgressBar>(R.id.loadingPanel)
         val button = rootView.findViewById<Button>(R.id.toStartButton2)
         val catButton = rootView.findViewById<Button>(R.id.getFoxImageButton)
-        val catImageView = rootView.findViewById<ImageView>(R.id.catImageView)
+        val foxImageView = rootView.findViewById<ImageView>(R.id.foxImageView)
 
         catButton.setOnClickListener {
-            catImageView.setImageResource(0)
+            foxImageView.setImageResource(0)
             progressBar.visibility = View.VISIBLE
 
             getFoxImg { path ->
                 activity?.runOnUiThread {
                     Picasso.get().load(path)
-                        .into(catImageView, object : Callback {
+                        .into(foxImageView, object : Callback {
 
                             override fun onSuccess() {
                                 progressBar.visibility = View.GONE

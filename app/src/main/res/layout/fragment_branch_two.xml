@@ -20,7 +20,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
-        android:id="@+id/catImageView"
+        android:id="@+id/foxImageView"
         android:layout_width="377dp"
         android:layout_height="318dp"
         android:background="@color/black"
@@ -40,11 +40,11 @@
         android:indeterminate="true"
         android:indeterminateTintMode="src_atop"
         android:indeterminateTint="#D30909"
-        app:layout_constraintBottom_toBottomOf="@+id/catImageView"
+        app:layout_constraintBottom_toBottomOf="@+id/foxImageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.476"
-        app:layout_constraintStart_toStartOf="@+id/catImageView"
-        app:layout_constraintTop_toTopOf="@+id/catImageView" />
+        app:layout_constraintStart_toStartOf="@+id/foxImageView"
+        app:layout_constraintTop_toTopOf="@+id/foxImageView" />
 
     <Button
         android:id="@+id/getFoxImageButton"
@@ -54,5 +54,5 @@
         app:layout_constraintBottom_toTopOf="@+id/toStartButton2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/catImageView" />
+        app:layout_constraintTop_toBottomOf="@+id/foxImageView" />
 </androidx.constraintlayout.widget.ConstraintLayout>

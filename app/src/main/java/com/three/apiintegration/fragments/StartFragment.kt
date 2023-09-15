@@ -18,6 +18,7 @@ class StartFragment : Fragment() {
 
         requireActivity().onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
+                //For app to stay in start so that app doesn't shut down on backpress. Only for testing.
                 view?.findNavController()?.popBackStack(R.id.startFragment, false)
             }
         })
@@ -27,7 +28,6 @@ class StartFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
 
         val rootView = inflater.inflate(R.layout.fragment_start, container, false)
         val button = rootView.findViewById<Button>(R.id.startButton)
